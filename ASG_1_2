@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("\n");
+    int num;
+    printf("Enter any number: \n");
+    scanf("%d", &num);
+    int NthBit;
+    printf("Enter nth bit to toggle (0 -> 31): \n");
+    scanf("%d", &NthBit);
+    int toggled;
+
+    if (NthBit > 0 && NthBit < 32)
+    {
+        printf("Bit Toggled Successfully\n\n");
+        printf("Number before toggling 1 bit: %d (In Decimal)\n", num);
+        toggled = num ^ (1 << NthBit);
+        printf("Number After toggling 1 bit: %d (In Decimal)\n", toggled);
+    }
+    else
+    {
+        printf("Bit out of Range");
+    }
+    printf("\n\n");
+    return 0;
+}
